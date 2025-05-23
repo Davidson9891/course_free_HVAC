@@ -1,42 +1,76 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
-  <title>Ensino de Refrigeração Industrial</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Curso de Refrigeração HVAC</title>
   <style>
-    body { font-family: Arial; margin: 0; padding: 0; background: #f2f2f2; color: #333; }
-    header { background: #003366; color: white; padding: 20px; text-align: center; }
-    main { padding: 20px; max-width: 900px; margin: auto; background: white; }
-    h1, h2 { color: #003366; }
-    footer { text-align: center; padding: 10px; font-size: 14px; background: #eee; }
+    body { font-family: Arial, sans-serif; margin: 0; background: #f5f5f5; }
+    header { background: #004080; color: white; padding: 1rem; display: flex; justify-content: space-between; align-items: center; }
+    .menu-icon { cursor: pointer; display: block; width: 30px; }
+    .menu-icon div { height: 4px; background: white; margin: 6px 0; }
+    nav { display: none; background: #003060; padding: 1rem; }
+    nav a { color: white; display: block; margin: 0.5rem 0; text-decoration: none; }
+    section { padding: 1.5rem; }
+    h2 { color: #004080; }
+    .downloads a { display: block; margin: 0.5rem 0; color: #004080; text-decoration: none; }
+    .video-container { margin: 1rem 0; }
+    iframe { width: 100%; height: 315px; }
   </style>
 </head>
 <body>
-  <header>
-    <h1>Curso Rápido: Refrigeração Industrial</h1>
-    <p>Aprenda os fundamentos com linguagem simples</p>
-  </header>
-  <main>
-    <h2>O que é Refrigeração Industrial?</h2>
-    <p>É o processo de remoção de calor para resfriar ambientes ou produtos em indústrias. Utiliza compressores, condensadores, evaporadores e válvulas de expansão.</p>
 
-    <h2>Componentes Principais</h2>
-    <ul>
-      <li><strong>Compressor:</strong> comprime o gás refrigerante.</li>
-      <li><strong>Condensador:</strong> troca calor com o ambiente.</li>
-      <li><strong>Válvula de expansão:</strong> reduz a pressão do fluido.</li>
-      <li><strong>Evaporador:</strong> absorve o calor do ambiente.</li>
-    </ul>
+<header>
+  <h1>Curso HVAC</h1>
+  <div class="menu-icon" onclick="toggleMenu()">
+    <div></div><div></div><div></div>
+  </div>
+</header>
 
-    <h2>Dicas de Segurança</h2>
-    <p>Sempre utilize EPI. Tenha atenção a vazamentos e nunca mexa em sistemas pressurizados sem desligar a fonte.</p>
+<nav id="menu">
+  <a href="#modulos">Módulos</a>
+  <a href="#videoaulas">Vídeo Aulas</a>
+  <a href="#downloads">Materiais para Download</a>
+</nav>
 
-    <h2>Vídeo recomendado</h2>
-    <p><a href="https://www.youtube.com/watch?v=ZvxdrEpj6n8" target="_blank">Assista: Conceitos básicos de refrigeração industrial</a></p>
-  </main>
-  <footer>
-    <p>Site criado por [Seu Nome] - Gratuito com GitHub Pages</p>
-  </footer>
+<section id="modulos">
+  <h2>Módulos do Curso</h2>
+  <ul>
+    <li>Fundamentos da Refrigeração</li>
+    <li>Componentes de Sistemas HVAC</li>
+    <li>Refrigeração Comercial e Industrial</li>
+    <li>Psicrometria e Cargas Térmicas</li>
+    <li>Automação e Controle</li>
+    <li>Manutenção Preventiva e Corretiva</li>
+    <li>Normas e Segurança</li>
+  </ul>
+</section>
+
+<section id="videoaulas">
+  <h2>Vídeo Aulas</h2>
+  <div class="video-container">
+    <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" allowfullscreen></iframe>
+  </div>
+  <div class="video-container">
+    <iframe src="https://www.youtube.com/embed/another_video_id" allowfullscreen></iframe>
+  </div>
+</section>
+
+<section id="downloads">
+  <h2>Materiais para Download</h2>
+  <div class="downloads">
+    <a href="/livros/manual-tecnico-hvac.pdf" download>Manual Técnico HVAC (PDF)</a>
+    <a href="/videos/aula1.mp4" download>Aula 1 - Introdução</a>
+    <a href="/videos/aula2.mp4" download>Aula 2 - Componentes</a>
+  </div>
+</section>
+
+<script>
+  function toggleMenu() {
+    const menu = document.getElementById('menu');
+    menu.style.display = menu.style.display === 'block' ? 'none' : 'block';
+  }
+</script>
+
 </body>
 </html>
